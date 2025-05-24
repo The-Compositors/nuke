@@ -7,9 +7,11 @@ def camera_shake_to_transform():
     nodes = nuke.selectedNodes()
     if len(nodes) > 1 or len(nodes) == 0:
         nuke.message("Select One CameraShake node")
+        return
     node = nodes[0]
     if not node.Class() == "CameraShake3":
         nuke.message("Select One CameraShake node")
+        return
 
     #make group
     group_node = node.makeGroup()
