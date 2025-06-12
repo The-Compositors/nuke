@@ -1,6 +1,6 @@
 import nuke 
 
-def reeload_selected():
+def reload_selected():
     nodes = nuke.selectedNode()
     for node in nodes:
         if node.Class() == "Read":
